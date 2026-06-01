@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: support-crm
+    runtime: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 20.19.0
+      - key: DATABASE_FILE
+        value: /tmp/support-crm.sqlite
